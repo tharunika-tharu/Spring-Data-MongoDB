@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Employees</title>
+    <link rel="stylesheet" type="text/css" href="/css/display-all.css">
+</head>
+<body>
+<div class="container">
+    <h1>All Employees</h1>
+    <ul>
+        <li th:each="employee : ${employees}">
+            <span th:text="${employee.employeeName}"></span>
+            <a th:href="@{|/display/${employee.employeeID}|}" class="button">View Details</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

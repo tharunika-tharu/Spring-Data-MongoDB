@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Details</title>
+    <link rel="stylesheet" type="text/css" href="/css/display-employee.css">
+</head>
+<body>
+<div class="container">
+    <h1>Employee Details</h1>
+    <p th:if="${error}" th:text="${error}"></p>
+
+    <div th:if="${employee}">
+        <table>
+            <tr>
+                <th>ID</th>
+                <td><span th:text="${employee.employeeID}"></span></td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td><span th:text="${employee.employeeName}"></span></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><span th:text="${employee.employeeEmail}"></span></td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td><span th:text="${employee.location}"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
